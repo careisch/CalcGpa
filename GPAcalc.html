@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato: 400,700' rel='stylesheet' type='text/css'>
+    <title>GPA calculator</title> 
+    <script src="gpa.js"></script>
+</head>
+<body>
+
+    <form>
+        <input type="Text" name="class1Name" value="Class Name" 
+        onblur="if(this.value=='')this.value='Class Name';"
+        onfocus="if(this.value=='Class Name')this.value='';">
+        <input type="Text" name="class1Grade" value="Class Grade"
+        onblur="if(this.value=='')this.value='Class Grade';"
+        onfocus="if(this.value=='Class Grade')this.value='';">
+        <br>
+        <input type="Text" name="class2Name">
+        <input type="Text" name="class2Grade">
+        <br>
+        <input type="Text" name="class3Name">
+        <input type="Text" name="class3Grade">
+        <br>
+        <input type="Text" name="class4Name">
+        <input type="Text" name="class4Grade">
+        <br>
+        <input type="Text" name="class5Name">
+        <input type="Text" name="class5Grade">
+        <br>
+        <input type="Text" name="class6Name">
+        <input type="Text" name="class6Grade">
+        <br>
+        <input type="Text" name="class7Name">
+        <input type="Text" name="class7Grade">
+        <br>
+        <button id="submit" onclick="gpaCalc();">Submit</button>
+    </form>
+
+    <script type="text/javascript">
+    var input=document.getElementsByID('class1Name').value;
+    document.write('input');
+    </script>
+
+    <p id="calculation"></p>
+</body>
+</html>
