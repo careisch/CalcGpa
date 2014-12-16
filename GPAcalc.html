@@ -9,40 +9,113 @@
 </head>
 <body>
 
-    <form>
+    <form id="semesterGpa">
         <input type="Text" name="class1Name" value="Class Name" 
         onblur="if(this.value=='')this.value='Class Name';"
         onfocus="if(this.value=='Class Name')this.value='';">
-        <input type="Text" name="class1Grade" value="Class Grade"
-        onblur="if(this.value=='')this.value='Class Grade';"
-        onfocus="if(this.value=='Class Grade')this.value='';">
+        <label for="class1Grade">Class Grade: </label>
+        <select id="class1Grade">
+            <option value="A">A</option>
+            <option value="AB">AB</option>
+            <option value="B">B</option>
+            <option value="BC">BC</option>
+            <option value="C">C</option>
+            <option value="CD">CD</option>
+            <option value="D">D</option>
+            <option value="F">F</option>
+        </select>
         <br>
-        <input type="Text" name="class2Name">
-        <input type="Text" name="class2Grade">
+        <input type="Text" name="class2Name" value="Class Name" 
+        onblur="if(this.value=='')this.value='Class Name';"
+        onfocus="if(this.value=='Class Name')this.value='';">
+        <label for="class2Grade">Class Grade: </label>
+        <select id="class2Grade">
+            <option value="A">A</option>
+            <option value="AB">AB</option>
+            <option value="B">B</option>
+            <option value="BC">BC</option>
+            <option value="C">C</option>
+            <option value="CD">CD</option>
+            <option value="D">D</option>
+            <option value="F">F</option>
+        </select>
         <br>
-        <input type="Text" name="class3Name">
-        <input type="Text" name="class3Grade">
+        <input type="Text" name="class3Name" value="Class Name" 
+        onblur="if(this.value=='')this.value='Class Name';"
+        onfocus="if(this.value=='Class Name')this.value='';">
+        <label for="class3Grade">Class Grade: </label>
+        <select id="class3Grade">
+            <option value="A">A</option>
+            <option value="AB">AB</option>
+            <option value="B">B</option>
+            <option value="BC">BC</option>
+            <option value="C">C</option>
+            <option value="CD">CD</option>
+            <option value="D">D</option>
+            <option value="F">F</option>
+        </select>
         <br>
-        <input type="Text" name="class4Name">
-        <input type="Text" name="class4Grade">
+        <input type="Text" name="class4Name" value="Class Name" 
+        onblur="if(this.value=='')this.value='Class Name';"
+        onfocus="if(this.value=='Class Name')this.value='';">
+        <label for="class4Grade">Class Grade: </label>
+        <select id="class4Grade">
+            <option value="A">A</option>
+            <option value="AB">AB</option>
+            <option value="B">B</option>
+            <option value="BC">BC</option>
+            <option value="C">C</option>
+            <option value="CD">CD</option>
+            <option value="D">D</option>
+            <option value="F">F</option>
+        </select>
         <br>
-        <input type="Text" name="class5Name">
-        <input type="Text" name="class5Grade">
+        <input type="Text" name="class5Name" value="Class Name" 
+        onblur="if(this.value=='')this.value='Class Name';"
+        onfocus="if(this.value=='Class Name')this.value='';">
+        <label for="class5Grade">Class Grade: </label>
+        <select id="class5Grade">
+            <option value="A">A</option>
+            <option value="AB">AB</option>
+            <option value="B">B</option>
+            <option value="BC">BC</option>
+            <option value="C">C</option>
+            <option value="CD">CD</option>
+            <option value="D">D</option>
+            <option value="F">F</option>
+        </select>
         <br>
-        <input type="Text" name="class6Name">
-        <input type="Text" name="class6Grade">
+        <input type="Text" name="class6Name" value="Class Name" 
+        onblur="if(this.value=='')this.value='Class Name';"
+        onfocus="if(this.value=='Class Name')this.value='';">
+        <label for="class6Grade">Class Grade: </label>
+        <select id="class6Grade">
+            <option value="A">A</option>
+            <option value="AB">AB</option>
+            <option value="B">B</option>
+            <option value="BC">BC</option>
+            <option value="C">C</option>
+            <option value="CD">CD</option>
+            <option value="D">D</option>
+            <option value="F">F</option>
+        </select>
         <br>
-        <input type="Text" name="class7Name">
-        <input type="Text" name="class7Grade">
+        <input type="Text" name="class7Name" value="Class Name" 
+        onblur="if(this.value=='')this.value='Class Name';"
+        onfocus="if(this.value=='Class Name')this.value='';">
+        <label for="class7Grade">Class Grade: </label>
+        <select id="class7Grade">
+            <option value="A">A</option>
+            <option value="AB">AB</option>
+            <option value="B">B</option>
+            <option value="BC">BC</option>
+            <option value="C">C</option>
+            <option value="CD">CD</option>
+            <option value="D">D</option>
+            <option value="F">F</option>
+        </select>
         <br>
         <button id="submit" onclick="gpaCalc();">Submit</button>
     </form>
-
-    <script type="text/javascript">
-    var input=document.getElementsByID('class1Name').value;
-    document.write('input');
-    </script>
-
-    <p id="calculation"></p>
 </body>
 </html>
