@@ -1,9 +1,22 @@
 
 function onSubmit(){
-	window.onload = gpaCalc();
+	window.onload = calcSemester();
+}
+function onSubmit2(){
+	window.onload = calcCumulative();
 }
 
-function gpaCalc(){
+var semesterGpa;
+var totalQualityPoints;
+var totalCredits;
+var currentGpa;
+var totalAtemptCredits;
+var cumulativeGpa;
+
+function calcSemester(){
+					totalQualityPoints=0;
+					totalCredits=0;
+
              		var className = [
              		document.forms[0].class1Name.value,
              		document.forms[0].class2Name.value,
@@ -34,19 +47,13 @@ function gpaCalc(){
              		document.forms[0].class7Credits.value,
              		];
 
-             		var qualityPoints = [
-
-             		];
-
-             		var totalQualityPoints =0;
-             		var totalCredits =0;
-             		var semesterGpa;
-
+             		var qualityPoints = []
+             		   
              		
              		for (var i = 0; i < className.length; i++) {
              			if ((gradeConverter(classGrade[i]))*classCredits[i] >= 0) {
              			qualityPoints[i] = (gradeConverter(classGrade[i]))*classCredits[i];
-             			totalCredits = parseInt(classCredits[i]) + totalCredits;
+             			totalCredits = parseFloat(classCredits[i], 10) + totalCredits;
              			}
              			else{
              			continue;
@@ -59,15 +66,8 @@ function gpaCalc(){
 
              		semesterGpa = totalQualityPoints/totalCredits;
 
-             		alert(semesterGpa);
-
-             		
-             		
-
+             		document.getElementById("semesterGrade").innerHTML = semesterGpa;
              	}
-             		
-            	
-
 function gradeConverter (grade) {
         if (grade == 'A') {
         	grade = 4;
@@ -98,5 +98,11 @@ function gradeConverter (grade) {
         }
 
         return grade
+}
+function calcCumulative(){
+	currentGpa = parseFloat(document.forms[1].currentGpa.value);
+	totalAtemptCredits = parseFloat(document.forms[1].currentCredits.value);
 
+	cumulativeGpa = (((currentGpa * totalAtemptCredits) + (totalQualityPoints))/(totalCredits + totalAtemptCredits));
+	document.getElementById("cumulativeGrade").innerHTML = cumulativeGpa;
 }

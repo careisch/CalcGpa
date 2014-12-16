@@ -143,7 +143,24 @@
         onfocus="if(this.value=='Number of Credits')this.value='';">
         <br>
 
-        <button id="submit" onclick="onSubmit();">Submit</button>
+        <button type='button' id="submit" onclick="onSubmit();">Submit</button>
+        <br>
+        <span>Semester Grade: </span>
+        <span id="semesterGrade"></span>
+    </form>
+    <form>
+        <input type="Text" name="currentGpa" value="Current GPA" 
+        onblur="if(this.value=='')this.value='Current GPA';"
+        onfocus="if(this.value=='Current GPA')this.value='';">
+
+        <input type="Text" name="currentCredits" value="Total Number of Credits Attempted Credits" 
+        onblur="if(this.value=='')this.value='Total Number of Credits Attempted Credits';"
+        onfocus="if(this.value=='Total Number of Credits Attempted Credits')this.value='';">
+
+        <button type='button' id="submit" onclick="onSubmit2();">Submit</button>
+        <br>
+        <span>Cumulative Grade: </span>
+        <span id="cumulativeGrade"></span>
     </form>
 </body>
 </html>
