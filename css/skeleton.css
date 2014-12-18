@@ -176,7 +176,7 @@ input[type="button"] {
   color: #555;
   text-align: center;
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 900;
   line-height: 38px;
   letter-spacing: .1rem;
   text-transform: uppercase; 
@@ -239,7 +239,9 @@ select {
   border: 1px solid #D1D1D1;
   border-radius: 4px;
   box-shadow: none;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  }
+
 /* Removes awkard default styles on some inputs for iOS */
 input[type="email"],
 input[type="search"],
@@ -268,9 +270,10 @@ select:focus {
   outline: 0; }
 label,
 legend {
-  display: block;
+  margin-left: 4rem;
+  display: inline-block;
   margin-bottom: .5rem;
-  font-weight: 600; }
+  font-weight: 300; }
 fieldset {
   padding: 0;
   border-width: 0; }
@@ -278,9 +281,24 @@ input[type="checkbox"],
 input[type="radio"] {
   display: inline; }
 label > .label-body {
-  display: inline-block;
   margin-left: .5rem;
-  font-weight: normal; }
+  font-weight: normal;
+  }
+.className{
+  width: 15em;
+}
+.classGrade{
+  width: 4em;
+}
+.classCredits{
+  width: 10em;
+}
+.currentGpa{
+  width: 10em;
+}
+.currentCredits{
+  width: 20em;
+}
 
 
 /* Lists
