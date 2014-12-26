@@ -219,8 +219,8 @@ input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
   color: #FFF;
-  background-color: #1EAEDB;
-  border-color: #1EAEDB; }
+  background-color: #ddac00;
+  border-color: #ddac00; }
 
 
 /* Forms
@@ -288,7 +288,7 @@ label > .label-body {
   width: 15em;
 }
 .classGrade{
-  width: 4em;
+  width: 4.6em;
 }
 .classCredits{
   width: 10em;

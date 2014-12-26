@@ -69,33 +69,35 @@ function calcSemester(){
              		document.getElementById("semesterGrade").innerHTML = semesterGpa;
              	}
 function gradeConverter (grade) {
-        if (grade == 'A') {
+        switch(grade){
+        case "A":
         	grade = 4;
-        }
-        else if(grade == 'AB'){
+            break;
+        case "AB":
         	grade = 3.5;
-        }
-        else if(grade == 'B'){
+            break;
+       case "B":
         	grade = 3;
-        }
-        else if(grade == 'BC'){
+            break;
+        case "BC":
         	grade = 2.5;
-        }
-        else if(grade == 'C'){
+            break;
+        case "C":
         	grade = 2;
-        }
-        else if(grade == 'CD'){
+            break;
+        case "CD":
         	grade = 1.5;
-        }
-        else if(grade == 'D'){
+            break;
+       case "D":
         	grade = 1;
-        }
-        else if(grade == 'F'){
+            break;
+        case "F":
         	grade = 0;
-        }
-        else{
+            break;
+        default:
         	grade = "error";
-        }
+        
+    }
 
         return grade
 }
