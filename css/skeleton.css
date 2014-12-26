@@ -299,6 +299,11 @@ label > .label-body {
 .currentCredits{
   width: 20em;
 }
+.semesterGpa{
+  width: 90%;
+  margin: 0 auto;
+  padding-left: 20%;
+}
 
 
 /* Lists

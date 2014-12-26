@@ -41,10 +41,10 @@
   <section class="header">
       <h1 class="title"><img id="logo" src="images/MichiganTechLogo.png"> Michigan Tech GPA and Class Grade Calculator</h1>
     </section>
-<div class="row">
-  <div class="twelve columns">
-    <form id="semesterGpa">
-        <div class="three columns">
+<div class="twelve columns">
+    <form class="semesterGpa">
+        <div class="row">
+            <div class="three columns">
         <input class="className" type="Text" name="class1Name" value="Class Name" 
         onblur="if(this.value=='')this.value='Class Name';"
         onfocus="if(this.value=='Class Name')this.value='';">
@@ -231,7 +231,7 @@
         <span id="semesterGrade"></span>
         </div>
     </form>
-    <form>
+    <form class="semesterGpa">
         <div class="row">
         <div class="three columns">
         <input class="currentGpa"type="Text" name="currentGpa" value="Current GPA" 
