@@ -5,6 +5,9 @@ function onSubmit(){
 function onSubmit2(){
 	window.onload = calcCumulative();
 }
+function onSubmit3(){
+    window.onload = calcGrade();
+}
 
 var semesterGpa;
 var totalQualityPoints;
@@ -12,6 +15,52 @@ var totalCredits;
 var currentGpa;
 var totalAtemptCredits;
 var cumulativeGpa;
+
+function calcGrade(){
+    var groupName= [
+    document.forms[0].group1Name.value,
+    document.forms[0].group2Name.value,
+    document.forms[0].group3Name.value,
+    document.forms[0].group4Name.value,
+    document.forms[0].group5Name.value,
+    document.forms[0].group6Name.value,
+    document.forms[0].group7Name.value
+    ]
+
+    var groupGrade=[
+    document.forms[0].group1Grade.value,
+    document.forms[0].group2Grade.value,
+    document.forms[0].group3Grade.value,
+    document.forms[0].group4Grade.value,
+    document.forms[0].group5Grade.value,
+    document.forms[0].group6Grade.value,
+    document.forms[0].group7Grade.value
+    ]
+
+    var groupWeight=[
+    document.forms[0].group1Weight.value,
+    document.forms[0].group2Weight.value,
+    document.forms[0].group3Weight.value,
+    document.forms[0].group4Weight.value,
+    document.forms[0].group5Weight.value,
+    document.forms[0].group6Weight.value,
+    document.forms[0].group7Weight.value
+    ]
+
+    var groupPer=[]
+
+    var totalGrade =0;
+
+    for (var i = 0; i < groupGrade.length; i++) {
+            if ((parseFloat(groupGrade[i], 10)*parseFloat(groupWeight[i], 10))*.01 >= 0) {
+                groupPer[i] = (parseFloat(groupGrade[i], 10)*parseFloat(groupWeight[i], 10))*.01;
+                totalGrade = parseFloat(groupPer[i], 10) + totalGrade;
+            }
+    }
+
+    document.getElementById("semesterGrade").innerHTML = totalGrade + '%';
+
+}
 
 function calcSemester(){
 					totalQualityPoints=0;

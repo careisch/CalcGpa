@@ -22,7 +22,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="stylesheet" href="css/gradeStylesheet.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -53,149 +53,168 @@
         </nav>
 <div class="twelve columns">
     <p class="page-description">Grade calculator</p>
-    <form class="semesterGpa">
+    <form class="gradeCalc">
         <div class="row">
-            <div class="three columns">
+            <div class="Four columns">
         <input class="groupName" type="Text" name="group1Name" value="Group Name" 
         onblur="if(this.value=='')this.value='Group Name';"
         onfocus="if(this.value=='Group Name')this.value='';">
         </div>
 
-       <div class="One columns">
+       <div class="Three columns">
         <input class="groupGrade" type="Text" name="group1Grade" value="Grade" 
         onblur="if(this.value=='')this.value='Grade';"
         onfocus="if(this.value=='Grade')this.value='';">
+        <label for="groupGrade">%</label>
         </div>
 
-        <div class="One columns">
-        <input class="groupWeight" type="Text" name="group1Weight">
-        <label for="groupweight">% Group Weight</label>
+        <div class="Three columns">
+        <input class="groupWeight" type="Text" name="group1Weight" value="Weight" 
+        onblur="if(this.value=='')this.value='Weight';"
+        onfocus="if(this.value=='Weight')this.value='';">
+        <label for="groupWeight">%</label>
         </div>
         </div> <!--end of row-->
 
         <div class="row">
-            <div class="three columns">
-        <input class="groupName" type="Text" name="group1Name" value="Group Name" 
+            <div class="Four columns">
+        <input class="groupName" type="Text" name="group2Name" value="Group Name" 
         onblur="if(this.value=='')this.value='Group Name';"
         onfocus="if(this.value=='Group Name')this.value='';">
         </div>
 
-       <div class="One columns">
-        <input class="groupGrade" type="Text" name="group1Grade" value="Grade" 
+       <div class="Three columns">
+        <input class="groupGrade" type="Text" name="group2Grade" value="Grade" 
         onblur="if(this.value=='')this.value='Grade';"
         onfocus="if(this.value=='Grade')this.value='';">
+        <label for="groupGrade">%</label>
         </div>
 
-        <div class="One columns">
-        <input class="groupWeight" type="Text" name="group1Weight">
-        <label for="groupweight">% Group Weight</label>
+        <div class="Three columns">
+        <input class="groupWeight" type="Text" name="group2Weight" value="Weight" 
+        onblur="if(this.value=='')this.value='Weight';"
+        onfocus="if(this.value=='Weight')this.value='';">
+        <label for="groupWeight">%</label>
         </div>
         </div> <!--end of row-->
 
        <div class="row">
-            <div class="three columns">
-        <input class="groupName" type="Text" name="group1Name" value="Group Name" 
+            <div class="Four columns">
+        <input class="groupName" type="Text" name="group3Name" value="Group Name" 
         onblur="if(this.value=='')this.value='Group Name';"
         onfocus="if(this.value=='Group Name')this.value='';">
         </div>
 
-       <div class="One columns">
-        <input class="groupGrade" type="Text" name="group1Grade" value="Grade" 
+       <div class="Three columns">
+        <input class="groupGrade" type="Text" name="group3Grade" value="Grade" 
         onblur="if(this.value=='')this.value='Grade';"
         onfocus="if(this.value=='Grade')this.value='';">
+        <label for="groupGrade">%</label>
         </div>
 
-        <div class="One columns">
-        <input class="groupWeight" type="Text" name="group1Weight">
-        <label for="groupweight">% Group Weight</label>
-        </div>
-        </div> <!--end of row-->
-
-      <div class="row">
-            <div class="three columns">
-        <input class="groupName" type="Text" name="group1Name" value="Group Name" 
-        onblur="if(this.value=='')this.value='Group Name';"
-        onfocus="if(this.value=='Group Name')this.value='';">
-        </div>
-
-       <div class="One columns">
-        <input class="groupGrade" type="Text" name="group1Grade" value="Grade" 
-        onblur="if(this.value=='')this.value='Grade';"
-        onfocus="if(this.value=='Grade')this.value='';">
-        </div>
-
-        <div class="One columns">
-        <input class="groupWeight" type="Text" name="group1Weight">
-        <label for="groupweight">% Group Weight</label>
-        </div>
-        </div> <!--end of row-->
-<div class="row">
-            <div class="three columns">
-        <input class="groupName" type="Text" name="group1Name" value="Group Name" 
-        onblur="if(this.value=='')this.value='Group Name';"
-        onfocus="if(this.value=='Group Name')this.value='';">
-        </div>
-
-       <div class="One columns">
-        <input class="groupGrade" type="Text" name="group1Grade" value="Grade" 
-        onblur="if(this.value=='')this.value='Grade';"
-        onfocus="if(this.value=='Grade')this.value='';">
-        </div>
-
-        <div class="One columns">
-        <input class="groupWeight" type="Text" name="group1Weight">
-        <label for="groupweight">% Group Weight</label>
+        <div class="Three columns">
+        <input class="groupWeight" type="Text" name="group3Weight" value="Weight" 
+        onblur="if(this.value=='')this.value='Weight';"
+        onfocus="if(this.value=='Weight')this.value='';">
+        <label for="groupWeight">%</label>
         </div>
         </div> <!--end of row-->
 
        <div class="row">
-            <div class="three columns">
-        <input class="groupName" type="Text" name="group1Name" value="Group Name" 
+           <div class="Four columns">
+        <input class="groupName" type="Text" name="group4Name" value="Group Name" 
         onblur="if(this.value=='')this.value='Group Name';"
         onfocus="if(this.value=='Group Name')this.value='';">
         </div>
 
-       <div class="One columns">
-        <input class="groupGrade" type="Text" name="group1Grade" value="Grade" 
+       <div class="Three columns">
+        <input class="groupGrade" type="Text" name="group4Grade" value="Grade" 
         onblur="if(this.value=='')this.value='Grade';"
         onfocus="if(this.value=='Grade')this.value='';">
+        <label for="groupGrade">%</label>
         </div>
 
-        <div class="One columns">
-        <input class="groupWeight" type="Text" name="group1Weight">
-        <label for="groupweight">% Group Weight</label>
+        <div class="Three columns">
+        <input class="groupWeight" type="Text" name="group4Weight" value="Weight" 
+        onblur="if(this.value=='')this.value='Weight';"
+        onfocus="if(this.value=='Weight')this.value='';">
+        <label for="groupWeight">%</label>
         </div>
         </div> <!--end of row-->
 
-        <div class="row">
-            <div class="three columns">
-        <input class="groupName" type="Text" name="group1Name" value="Group Name" 
+ <div class="row">
+          <div class="Four columns">
+        <input class="groupName" type="Text" name="group5Name" value="Group Name" 
         onblur="if(this.value=='')this.value='Group Name';"
         onfocus="if(this.value=='Group Name')this.value='';">
         </div>
 
-       <div class="One columns">
-        <input class="groupGrade" type="Text" name="group1Grade" value="Grade" 
+       <div class="Three columns">
+        <input class="groupGrade" type="Text" name="group5Grade" value="Grade" 
         onblur="if(this.value=='')this.value='Grade';"
         onfocus="if(this.value=='Grade')this.value='';">
+        <label for="groupGrade">%</label>
         </div>
 
-        <div class="One columns">
-        <input class="groupWeight" type="Text" name="group1Weight">
-        <label for="groupweight">% Group Weight</label>
+        <div class="Three columns">
+        <input class="groupWeight" type="Text" name="group5Weight" value="Weight" 
+        onblur="if(this.value=='')this.value='Weight';"
+        onfocus="if(this.value=='Weight')this.value='';">
+        <label for="groupWeight">%</label>
+        </div>
+        </div> <!--end of row-->
+
+       <div class="row">
+           <div class="Four columns">
+        <input class="groupName" type="Text" name="group6Name" value="Group Name" 
+        onblur="if(this.value=='')this.value='Group Name';"
+        onfocus="if(this.value=='Group Name')this.value='';">
+        </div>
+
+      <div class="Three columns">
+        <input class="groupGrade" type="Text" name="group6Grade" value="Grade" 
+        onblur="if(this.value=='')this.value='Grade';"
+        onfocus="if(this.value=='Grade')this.value='';">
+        <label for="groupGrade">%</label>
+        </div>
+
+       <div class="Three columns">
+        <input class="groupWeight" type="Text" name="group6Weight" value="Weight" 
+        onblur="if(this.value=='')this.value='Weight';"
+        onfocus="if(this.value=='Weight')this.value='';">
+        <label for="groupWeight">%</label>
+        </div>
+        </div> <!--end of row-->
+
+         <div class="row">
+           <div class="Four columns">
+        <input class="groupName" type="Text" name="group7Name" value="Group Name" 
+        onblur="if(this.value=='')this.value='Group Name';"
+        onfocus="if(this.value=='Group Name')this.value='';">
+        </div>
+
+      <div class="Three columns">
+        <input class="groupGrade" type="Text" name="group7Grade" value="Grade" 
+        onblur="if(this.value=='')this.value='Grade';"
+        onfocus="if(this.value=='Grade')this.value='';">
+        <label for="groupGrade">%</label>
+        </div>
+
+       <div class="Three columns">
+        <input class="groupWeight" type="Text" name="group7Weight" value="Weight" 
+        onblur="if(this.value=='')this.value='Weight';"
+        onfocus="if(this.value=='Weight')this.value='';">
+        <label for="groupWeight">%</label>
         </div>
         </div> <!--end of row-->
 
         <div class="row">
-        <button class="button-primary" type='button' id="submit" onclick="onSubmit();">Submit</button>
-        <span>Semester GPA: </span>
+        <button class="button-primary" type='button' id="submit" onclick="onSubmit3()">Submit</button>
+        <span>Class Grade:  </span>
         <span id="semesterGrade"></span>
         </div>
     </form>
-   
     </div>
-    </div> <!-- end of row -->
-  </div>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
