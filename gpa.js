@@ -6,63 +6,83 @@ function onSubmit2(){
 	window.onload = calcCumulative();
 }
 function onSubmit3(){
-    window.onload = calcGrade();
+    window.onload = numClasses();
 }
 
-var semesterGpa;
+var globalNum
+
+function numClasses(num){
+    
+    globalNum = num;
+
+    var box = document.getElementById("select_num_class");
+    var classBox = document.getElementById("classBox");
+    var heading = document.getElementById("heading");
+    
+    var classes = [
+    document.getElementById("class1"),
+    document.getElementById("class2"),
+    document.getElementById("class3"),
+    document.getElementById("class4"),
+    document.getElementById("class5"),
+    document.getElementById("class6"),
+    document.getElementById("class7"),
+    ]
+    
+     for(var q=0; q < classes.length; q++){
+           classes[q].style.display='none'; 
+        }
+    
+    if(num > 0){
+        
+        for(var i=0; i < num; i++){
+            classes[i].style.display='inline';
+        }
+        
+        //changing classBox
+        classBox.style.display='inline';
+        classBox.style.border='none';
+        classBox.style.margin='1.75% 0 0 37%';
+        
+        heading.style.fontSize='1em';
+        heading.style.padding='0 0 6% 0';
+        
+        box.style.margin='0 0 0 3%';
+        
+        document.getElementById("page-description").style.display='block';
+        document.getElementById("submit").style.display='block';
+        document.getElementById("cumlative").style.display='block';
+        
+    }
+    else{
+        //reseting classBox back
+        classBox.style.display='block';
+        classBox.style.border='1px solid #D1D1D1';
+        classBox.style.margin='15% 0 0 33%';
+        
+        heading.style.fontSize='2em';
+        heading.style.padding='9%';
+        
+        box.style.margin='0 0 10% 40%';
+        
+        
+        document.getElementById("page-description").style.display='none';
+        document.getElementById("submit").style.display='none';
+        document.getElementById("cumlative").style.display='none';
+        
+    }
+    
+}
+
+    var semesterGpa;
 var totalQualityPoints;
 var totalCredits;
 var currentGpa;
 var totalAtemptCredits;
 var cumulativeGpa;
 
-function calcGrade(){
-    var groupName= [
-    document.forms[0].group1Name.value,
-    document.forms[0].group2Name.value,
-    document.forms[0].group3Name.value,
-    document.forms[0].group4Name.value,
-    document.forms[0].group5Name.value,
-    document.forms[0].group6Name.value,
-    document.forms[0].group7Name.value
-    ]
-
-    var groupGrade=[
-    document.forms[0].group1Grade.value,
-    document.forms[0].group2Grade.value,
-    document.forms[0].group3Grade.value,
-    document.forms[0].group4Grade.value,
-    document.forms[0].group5Grade.value,
-    document.forms[0].group6Grade.value,
-    document.forms[0].group7Grade.value
-    ]
-
-    var groupWeight=[
-    document.forms[0].group1Weight.value,
-    document.forms[0].group2Weight.value,
-    document.forms[0].group3Weight.value,
-    document.forms[0].group4Weight.value,
-    document.forms[0].group5Weight.value,
-    document.forms[0].group6Weight.value,
-    document.forms[0].group7Weight.value
-    ]
-
-    var groupPer=[]
-
-    var totalGrade =0;
-
-    for (var i = 0; i < groupGrade.length; i++) {
-            if ((parseFloat(groupGrade[i], 10)*parseFloat(groupWeight[i], 10))*.01 >= 0) {
-                groupPer[i] = (parseFloat(groupGrade[i], 10)*parseFloat(groupWeight[i], 10))*.01;
-                totalGrade = parseFloat(groupPer[i], 10) + totalGrade;
-            }
-    }
-
-    document.getElementById("semesterGrade").innerHTML = totalGrade + '%';
-
-}
-
 function calcSemester(){
+
 					totalQualityPoints=0;
 					totalCredits=0;
 
@@ -99,7 +119,7 @@ function calcSemester(){
              		var qualityPoints = []
              		   
              		
-             		for (var i = 0; i < className.length; i++) {
+             		for (var i = 0; i < globalNum; i++) {
              			if ((gradeConverter(classGrade[i]))*classCredits[i] >= 0) {
              			qualityPoints[i] = (gradeConverter(classGrade[i]))*classCredits[i];
              			totalCredits = parseFloat(classCredits[i], 10) + totalCredits;
@@ -109,7 +129,7 @@ function calcSemester(){
                     		}
                     	}
 
-             		for (var q = 0; q < qualityPoints.length; q++) {
+             		for (var q = 0; q < globalNum; q++) {
              			totalQualityPoints = qualityPoints[q] + totalQualityPoints;
              		}
 
@@ -117,6 +137,8 @@ function calcSemester(){
 
              		document.getElementById("semesterGrade").innerHTML = semesterGpa;
              	}
+
+
 function gradeConverter (grade) {
         switch(grade){
         case "A":

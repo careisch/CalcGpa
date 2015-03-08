@@ -5,3 +5,30 @@
 	padding-right: 1em;
 
 }
+#classBox{
+ width: 33%;
+margin: 15% 0 0 33%;
+ border: 1px solid #D1D1D1;
+ border-radius: 6px;
+    
+}
+#heading{
+ font-size: 2em; 
+ margin: 0;
+ padding: 9%;
+}
+
+#select_num_class{
+    margin: 0 0 10% 40%;
+}
+.container{
+ margin: 2% auto;
+}
+
+#page-description{
+ margin: 0 0 2% 43%;   
+}
+#total{
+ padding-left: 2%;   
+padding-right: 2%;
+}
