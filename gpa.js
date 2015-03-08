@@ -1,15 +1,36 @@
 
 function onSubmit(){
 	window.onload = calcSemester();
+    window.onload = calcNum();
 }
 function onSubmit2(){
 	window.onload = calcCumulative();
 }
-function onSubmit3(){
-    window.onload = numClasses();
-}
 
 var globalNum
+
+//finds how many feilds displayed are not filled
+function calcNum(){
+    
+    var classCredits = [
+					document.forms[0].class1Credits.value,
+             		document.forms[0].class2Credits.value,
+             		document.forms[0].class3Credits.value,
+             		document.forms[0].class4Credits.value,
+             		document.forms[0].class5Credits.value,
+             		document.forms[0].class6Credits.value,
+             		document.forms[0].class7Credits.value,
+             		];
+    var count = 0;
+    for(var i = 0; i < globalNum; i++){ 
+        if(classCredits[i] == "Number of Credits"){
+            count++;
+        }
+        
+    }
+    
+    return count;
+}
 
 function numClasses(num){
     
@@ -116,10 +137,9 @@ function calcSemester(){
              		document.forms[0].class7Credits.value,
              		];
 
-             		var qualityPoints = []
-             		   
-             		
-             		for (var i = 0; i < globalNum; i++) {
+             		var qualityPoints = [];
+    
+             		for (var i = 0; i < globalNum-calcNum(); i++) {
              			if ((gradeConverter(classGrade[i]))*classCredits[i] >= 0) {
              			qualityPoints[i] = (gradeConverter(classGrade[i]))*classCredits[i];
              			totalCredits = parseFloat(classCredits[i], 10) + totalCredits;
@@ -129,11 +149,19 @@ function calcSemester(){
                     		}
                     	}
 
-             		for (var q = 0; q < globalNum; q++) {
+             		for (var q = 0; q < globalNum-calcNum(); q++) {
              			totalQualityPoints = qualityPoints[q] + totalQualityPoints;
              		}
 
              		semesterGpa = totalQualityPoints/totalCredits;
+    
+                    if(isNaN(semesterGpa)){
+                     semesterGpa = "Enter the number of credits";   
+                    }
+                    else{
+                     semesterGpa = semesterGpa.toFixed(2);   
+                    }
+                    
 
              		document.getElementById("semesterGrade").innerHTML = semesterGpa;
              	}
@@ -177,5 +205,14 @@ function calcCumulative(){
 	totalAtemptCredits = parseFloat(document.forms[1].currentCredits.value);
 
 	cumulativeGpa = (((currentGpa * totalAtemptCredits) + (totalQualityPoints))/(totalCredits + totalAtemptCredits));
+    
+      if(isNaN(cumulativeGpa)){
+                     cumulativeGpa = "Check your values";   
+                    }
+                    else{
+                     cumulativeGpa = cumulativeGpa.toFixed(2);   
+                    }
+    
+    
 	document.getElementById("cumulativeGrade").innerHTML = cumulativeGpa;
 }
