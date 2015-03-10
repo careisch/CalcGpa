@@ -38,15 +38,14 @@
 <body>
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-  <section class="header">
-      <h1 class="title"><img id="logo" src="images/MichiganTechLogo.png"> Michigan Tech GPA  Calculator</h1>
-    </section>
-<div class="twelve columns"> 
-    
+<div class="container">
+    <div class="row">
+        <div class="three columns"><img id="logo" src="images/MichiganTechLogo.png"></div>
+        <div class="nine columns"><h1 class="title">Michigan Tech GPA  Calculator</h1></div>
+    </div>
     <div class="numClass" id="classBox">
-    <label for="select_num_class" id="heading">Number of Classes?</label>    
-    <select id="select_num_class" onchange="numClasses(this.value)">
+        <label for="select_num_class" id="heading">Number of Classes?</label>    
+            <select id="select_num_class" onchange="numClasses(this.value)">
             <option value=0>0</option>
             <option value=1>1</option>
             <option value=2>2</option>
@@ -55,142 +54,144 @@
             <option value=5>5</option>
             <option value=6>6</option>
 <!--        <option value=7>7</option>-->
-        </select>
+            </select>
     </div>
-    
-    <p id="page-description" style="display: none;">Gpa calculator</p>
+    <div class="row">
+        <div class="twelve columns">
+        <p id="page-description" style="display: none;">Gpa calculator</p>
+        </div>
+    </div>
     <form class="semesterGpa">
-        
-        <div id="class1" class="row" style="display: none;">
+        <div class="row" id="class1" style="display: none;">  
+            <div class="four columns">
+                <input class="className" type="Text" name="class1Name" value="Class Name" 
+                onblur="if(this.value=='')this.value='Class Name';"
+                onfocus="if(this.value=='Class Name')this.value='';">
+            </div>
+          <div class="three columns">
+                <label for="class1Grade">Grade: </label>
+                <select id="class1Grade" class="classGrade">
+                    <option value="A">A</option>
+                    <option value="AB">AB</option>
+                    <option value="B">B</option>
+                    <option value="BC">BC</option>
+                    <option value="C">C</option>
+                    <option value="CD">CD</option>
+                    <option value="D">D</option>
+                    <option value="F">F</option>
+                </select>
+            </div>
+
             <div class="three columns">
-        <input class="className" type="Text" name="class1Name" value="Class Name" 
-        onblur="if(this.value=='')this.value='Class Name';"
-        onfocus="if(this.value=='Class Name')this.value='';">
-        </div>
-        <div class="three columns">
-        <label for="class1Grade">Grade: </label>
-        <select id="class1Grade" class="classGrade">
-            <option value="A">A</option>
-            <option value="AB">AB</option>
-            <option value="B">B</option>
-            <option value="BC">BC</option>
-            <option value="C">C</option>
-            <option value="CD">CD</option>
-            <option value="D">D</option>
-            <option value="F">F</option>
-        </select>
-        </div>
-        <div class="four columns">
-        <input class="classCredits" type="Text" name="class1Credits" value="Number of Credits" 
-        onblur="if(this.value=='')this.value='Number of Credits';"
-        onfocus="if(this.value=='Number of Credits')this.value='';">
-        </div>
-        </div> <!--end of row-->
-        
-        <div id="class2" class="row" style="display: none;">
-        <div class="three columns">
-        <input class="className" type="Text" name="class2Name" value="Class Name" 
-        onblur="if(this.value=='')this.value='Class Name';"
-        onfocus="if(this.value=='Class Name')this.value='';">
-        </div>
-        <div class="three columns">
-        <label for="class2Grade">Grade: </label>
-        <select id="class2Grade" class="classGrade">
-            <option value="A">A</option>
-            <option value="AB">AB</option>
-            <option value="B">B</option>
-            <option value="BC">BC</option>
-            <option value="C">C</option>
-            <option value="CD">CD</option>
-            <option value="D">D</option>
-            <option value="F">F</option>
-        </select>
-        </div>
-        <div class="three columns">
-        <input class="classCredits" type="Text" name="class2Credits" value="Number of Credits" 
-        onblur="if(this.value=='')this.value='Number of Credits';"
-        onfocus="if(this.value=='Number of Credits')this.value='';">
-        </div>
-        </div> <!--end of row-->
-        
-       <div id="class3" class="row" style="display: none;">
-        <div class="three columns">
-        <input class="className" type="Text" name="class3Name" value="Class Name" 
-        onblur="if(this.value=='')this.value='Class Name';"
-        onfocus="if(this.value=='Class Name')this.value='';">
-        </div>
-        <div class="three columns">
-        <label for="class3Grade">Grade: </label>
-        <select id="class3Grade" class="classGrade">
-            <option value="A">A</option>
-            <option value="AB">AB</option>
-            <option value="B">B</option>
-            <option value="BC">BC</option>
-            <option value="C">C</option>
-            <option value="CD">CD</option>
-            <option value="D">D</option>
-            <option value="F">F</option>
-        </select>
-        </div>
-        <div class="three columns">
-        <input class="classCredits" type="Text" name="class3Credits" value="Number of Credits" 
-        onblur="if(this.value=='')this.value='Number of Credits';"
-        onfocus="if(this.value=='Number of Credits')this.value='';">
-        </div>
-        </div> <!--end of row-->
-        
-       <div id="class4" class="row" style="display: none;">
-        <div class="three columns">
-        <input class="className" type="Text" name="class4Name" value="Class Name" 
-        onblur="if(this.value=='')this.value='Class Name';"
-        onfocus="if(this.value=='Class Name')this.value='';">
-        </div>
-        <div class="three columns">
-        <label for="class4Grade">Grade: </label>
-        <select id="class4Grade" class="classGrade">
-            <option value="A">A</option>
-            <option value="AB">AB</option>
-            <option value="B">B</option>
-            <option value="BC">BC</option>
-            <option value="C">C</option>
-            <option value="CD">CD</option>
-            <option value="D">D</option>
-            <option value="F">F</option>
-        </select>
-        </div>
-        <div class="three columns">
-        <input class="classCredits" type="Text" name="class4Credits" value="Number of Credits" 
-        onblur="if(this.value=='')this.value='Number of Credits';"
-        onfocus="if(this.value=='Number of Credits')this.value='';">
-        </div>
-        </div> <!--end of row-->
-        
+                <input class="classCredits" type="Text" name="class1Credits" value="Number of Credits" 
+                onblur="if(this.value=='')this.value='Number of Credits';"
+                onfocus="if(this.value=='Number of Credits')this.value='';">
+            </div>
+        </div> <!---------------------end of row------------------------------------------------>
+
+        <div class="row" id="class2" style="display: none;">
+            <div class="four columns">
+                <input class="className" type="Text" name="class2Name" value="Class Name" 
+                onblur="if(this.value=='')this.value='Class Name';"
+                onfocus="if(this.value=='Class Name')this.value='';">
+            </div>
+            <div class="two columns">
+                <label for="class2Grade">Grade: </label>
+                <select id="class2Grade" class="classGrade">
+                    <option value="A">A</option>
+                    <option value="AB">AB</option>
+                    <option value="B">B</option>
+                    <option value="BC">BC</option>
+                    <option value="C">C</option>
+                    <option value="CD">CD</option>
+                    <option value="D">D</option>
+                    <option value="F">F</option>
+                </select>
+            </div>
+            <div class="four columns">
+                <input class="classCredits" type="Text" name="class2Credits" value="Number of Credits" 
+                onblur="if(this.value=='')this.value='Number of Credits';"
+                onfocus="if(this.value=='Number of Credits')this.value='';">
+            </div>
+        </div> <!---------------------end of row------------------------------------------------>
+
+        <div id="class3" class="row" style="display: none;">
+            <div class="four columns">
+                <input class="className" type="Text" name="class3Name" value="Class Name" 
+                onblur="if(this.value=='')this.value='Class Name';"
+                onfocus="if(this.value=='Class Name')this.value='';">
+            </div>
+            <div class="two columns">
+                <label for="class3Grade">Grade: </label>
+                <select id="class3Grade" class="classGrade">
+                    <option value="A">A</option>
+                    <option value="AB">AB</option>
+                    <option value="B">B</option>
+                    <option value="BC">BC</option>
+                    <option value="C">C</option>
+                    <option value="CD">CD</option>
+                    <option value="D">D</option>
+                    <option value="F">F</option>
+                </select>
+            </div>
+            <div class="four columns">
+                <input class="classCredits" type="Text" name="class3Credits" value="Number of Credits" 
+                onblur="if(this.value=='')this.value='Number of Credits';"
+                onfocus="if(this.value=='Number of Credits')this.value='';">
+            </div>
+        </div> <!---------------------end of row------------------------------------------------>
+        <div id="class4" class="row" style="display: none;">
+            <div class="four columns">
+                <input class="className" type="Text" name="class4Name" value="Class Name" 
+                onblur="if(this.value=='')this.value='Class Name';"
+                onfocus="if(this.value=='Class Name')this.value='';">
+            </div>
+            <div class="two columns">
+                <label for="class4Grade">Grade: </label>
+                <select id="class4Grade" class="classGrade">
+                    <option value="A">A</option>
+                    <option value="AB">AB</option>
+                    <option value="B">B</option>
+                    <option value="BC">BC</option>
+                    <option value="C">C</option>
+                    <option value="CD">CD</option>
+                    <option value="D">D</option>
+                    <option value="F">F</option>
+                </select>
+            </div>
+            <div class="four columns">
+                <input class="classCredits" type="Text" name="class4Credits" value="Number of Credits" 
+                onblur="if(this.value=='')this.value='Number of Credits';"
+                onfocus="if(this.value=='Number of Credits')this.value='';">
+            </div>
+        </div> <!---------------------end of row------------------------------------------------>
+
         <div id="class5" class="row" style="display: none;">
-        <div class="three columns">
-        <input class="className" type="Text" name="class5Name" value="Class Name" 
-        onblur="if(this.value=='')this.value='Class Name';"
-        onfocus="if(this.value=='Class Name')this.value='';">
-        </div>
-        <div class="three columns">
-        <label for="class5Grade">Grade: </label>
-        <select id="class5Grade" class="classGrade">
-            <option value="A">A</option>
-            <option value="AB">AB</option>
-            <option value="B">B</option>
-            <option value="BC">BC</option>
-            <option value="C">C</option>
-            <option value="CD">CD</option>
-            <option value="D">D</option>
-            <option value="F">F</option>
-        </select>
-        </div>
-        <div class="three columns">
-        <input class="classCredits" type="Text" name="class5Credits" value="Number of Credits" 
-        onblur="if(this.value=='')this.value='Number of Credits';"
-        onfocus="if(this.value=='Number of Credits')this.value='';">
-        </div>
-        </div> <!--end of row-->
-        
+            <div class="four columns">
+                <input class="className" type="Text" name="class5Name" value="Class Name" 
+                onblur="if(this.value=='')this.value='Class Name';"
+                onfocus="if(this.value=='Class Name')this.value='';">
+            </div>
+            <div class="two columns">
+                <label for="class5Grade">Grade: </label>
+                <select id="class5Grade" class="classGrade">
+                    <option value="A">A</option>
+                    <option value="AB">AB</option>
+                    <option value="B">B</option>
+                    <option value="BC">BC</option>
+                    <option value="C">C</option>
+                    <option value="CD">CD</option>
+                    <option value="D">D</option>
+                    <option value="F">F</option>
+                </select>
+            </div>
+            <div class="four columns">
+                <input class="classCredits" type="Text" name="class5Credits" value="Number of Credits" 
+                onblur="if(this.value=='')this.value='Number of Credits';"
+                onfocus="if(this.value=='Number of Credits')this.value='';">
+            </div>
+        </div> <!---------------------end of row------------------------------------------------>
+
         <div id="class6" class="row" style="display: none;">
         <div class="three columns">
         <input class="className" type="Text" name="class6Name" value="Class Name" 
@@ -215,8 +216,8 @@
         onblur="if(this.value=='')this.value='Number of Credits';"
         onfocus="if(this.value=='Number of Credits')this.value='';">
         </div>
-        </div> <!--end of row-->
-        
+        </div> <!---------------------end of row------------------------------------------------>
+
         <div class="row" style="display: none;">
         <div class="three columns">
         <input class="className" type="Text" name="class7Name" value="Class Name" 
@@ -241,14 +242,15 @@
         onblur="if(this.value=='')this.value='Number of Credits';"
         onfocus="if(this.value=='Number of Credits')this.value='';">
         </div>
-        </div> <!--end of row-->
-        
+        </div> <!---------------------end of row------------------------------------------------>
+
         <div id="submit" class="row" style="display: none;">
         <button class="button-primary" type='button' id="submit" onclick="onSubmit();">Submit</button>
         <span id="total">Semester GPA: </span>
         <span id="semesterGrade"></span>
         </div>
     </form>
+</div>
     <form id="cumlative" class="semesterGpa" style="display: none;">
         <div class="row">
         <div class="three columns">
@@ -268,7 +270,6 @@
         <span id="cumulativeGrade"></span>
         </div>
     </form>
-    </div>
     </div> <!-- end of row -->
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

@@ -1,9 +1,6 @@
 #logo{
-	height: 2em;
-	width: 2.7em;
-	float: left;
-	padding-right: 1em;
-
+	height: 100%;
+	width: 100%;
 }
 #classBox{
  width: 33%;
@@ -26,9 +23,12 @@ margin: 15% 0 0 33%;
 }
 
 #page-description{
- margin: 0 0 2% 43%;   
+ text-align: center;
 }
 #total{
  padding-left: 2%;   
 padding-right: 2%;
+}
+.title{
+ text-align: center;   
 }

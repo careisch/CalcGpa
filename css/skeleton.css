@@ -289,31 +289,6 @@ label > .label-body {
   margin-left: .5rem;
   font-weight: normal;
   }
-.className{
-  width: 15em;
-}
-.classGrade{
-  width: 4.6em;
-}
-.classCredits{
-  width: 10em;
-}
-.currentGpa{
-  width: 10em;
-}
-.currentCredits{
-  width: 20em;
-}
-.semesterGpa{
-  width: 90%;
-  margin: 0 auto;
-  padding-left: 20%;
-}
-.semesterGrade{
-  width: 90%;
-  margin: 0 auto;
-  padding-left: 20%;
-}
 
 
 /* Lists
